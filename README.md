@@ -43,6 +43,8 @@ docker build -t my-discord-bot .
 docker run -it my-discord-bot
 ```
 
+Again, a valid bot token is not provided in the configuration file and will need to be provided.
+
 ## Boilerplate Features
 
 In addition to the features you get from [Discord.ts-Buddy](https://github.com/MitchCodes/Discord.ts-Buddy), here are the features that this repository has for development that I think could be useful as an example:
