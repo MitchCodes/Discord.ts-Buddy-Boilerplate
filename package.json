@@ -1,0 +1,66 @@
+{
+  "name": "discord.ts-buddy-boilerplate",
+  "version": "0.0.1",
+  "description": "Discord.ts-Buddy example boilerplate to quick start your Discord bot development.",
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 8.9.0"
+  },
+  "main": "",
+  "devDependencies": {
+    "@types/jest": "~22.2.0",
+    "@types/node": "~8.5.8",
+    "@types/winston": "~2.3.7",
+    "@types/nconf": "~0.0.37",
+    "jest": "~22.4.1",
+    "rimraf": "~2.6.2",
+    "tslint": "~5.9.1",
+    "tslint-microsoft-contrib": "~5.0.2",
+    "tsutils": "~2.18.0",
+    "typescript": "~2.6.2",
+    "merge-jsons-webpack-plugin": "~1.0.12",
+    "ts-jest": "~22.4.1",
+    "webpack": "~3.10.0",
+    "webpack-merge": "~4.1.1",
+    "ts-loader": "~3.3.1",
+    "file-loader": "~1.1.6"
+  },
+  "scripts": {
+    "clean": "rimraf coverage build tmp logs",
+    "build": "webpack --config webpack.dev.js",
+    "build-prod": "webpack --config webpack.prod.js",
+    "build-npm": "tsc --project tsconfig.release.json",
+    "watch": "webpack --config webpack.dev.js --watch",
+    "lint": "tslint -t stylish --project \"tsconfig.json\"",
+    "lint-autofix": "tslint -t stylish --fix --project \"tsconfig.json\"",
+    "pretest": "npm run lint --force",
+    "test": "npm run test-only",
+    "test-only": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test-basic": "jest"
+  },
+  "author": "Mitch Chiles <mitchchiles@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MitchCodes/Discord.ts-Buddy-Boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MitchCodes/Discord.ts-Buddy-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/MitchCodes/Discord.ts-Buddy-Boilerplate",
+  "dependencies": {
+    "tslib": "~1.8.1",
+    "winston": "2.3.0",
+    "winston-daily-rotate-file": "~1.7.2",
+    "nconf": "~0.10.0",
+    "rxjs": "~5.5.6",
+    "discord.js": "~11.3.2",
+    "ffmpeg-binaries": "~3.2.2-3",
+    "azure-storage": "~2.8.0",
+    "discord.ts-buddy": "^1.0.0",
+    "bufferutil": "~3.0.3",
+    "libsodium-wrappers": "^0.7.3",
+    "node-opus": "0.2.7",
+    "erlpack": "github:hammerandchisel/erlpack"
+  }
+}
