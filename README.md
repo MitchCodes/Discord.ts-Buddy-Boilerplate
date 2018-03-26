@@ -10,11 +10,26 @@ The purpose of this repository is to provide an example and template for using [
 
 ## Requirements
 
->To-do... a sad day indeed.
+* Node 6.0.0 or up
+* [node-gyp](https://github.com/nodejs/node-gyp) installed to build libraries necessary for production Discord.js
+    * Requires Python. See the Python installation instructions from the node-gyp link
+* Any other requirements from [discord.js](https://discord.js.org/#/docs/main/stable/general/welcome)
 
 ## Usage
 
->To-do :(.... I need to push stuff to npm and try using it in another package before I write this out.
+```
+git clone https://github.com/MitchCodes/Discord.ts-Buddy-Boilerplate.git
+cd Discord.ts-Buddy-Boilerplate
+yarn (OR) npm install
+npm run build
+```
+
+After installation and building, the application is ready to run. Running main.js in the build folder (with the build folder as the current working directory) with node will start the program. By default the config file will not have a valid token in it so you will have to provide one.
+
+```
+cd build
+node main.js
+```
 
 ## Boilerplate Features
 
@@ -35,7 +50,9 @@ There are three optional files that you can create in the root folder next to pa
 * _config.dev.json_
 * _config.prod.json_
 
-On build, webpack will take the config.common.json file (if it exists) and merge it with the appropriate dev or prod file (if they exist) depending on whether you built with `npm run build` or `npm run build-prod`. The file that gets generated is named `config.json`. Although this repo comes with [nconf](https://github.com/indexzero/nconf), you can obviously use any configuration library you want. The webpack config file merging will happen anyway.
+On build, webpack will take the config.common.json file (if it exists) and merge it with the appropriate dev or prod file (if they exist) depending on whether you built with `npm run build` or `npm run build-prod`. The file that gets generated is named `config.json`. _NOTE:_ It merges arrays by adding them together instead of replacing the entire array. Be careful of this.
+
+Although this repo comes with [nconf](https://github.com/indexzero/nconf), you can obviously use any configuration library you want. The webpack config file merging will happen anyway.
 
 ## IDE Notes
 

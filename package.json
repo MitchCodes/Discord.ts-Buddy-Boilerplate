@@ -1,6 +1,6 @@
 {
   "name": "discord.ts-buddy-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Discord.ts-Buddy example boilerplate to quick start your Discord bot development.",
   "engineStrict": true,
   "engines": {
