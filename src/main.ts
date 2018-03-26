@@ -6,7 +6,7 @@ import * as nconf from 'nconf';
 
 // Configurations
 nconf.argv().env();
-nconf.file({ file: './config.json' });
+nconf.file({ file: './build/config.json' });
 nconf.defaults({
   botTokens: [],
 });

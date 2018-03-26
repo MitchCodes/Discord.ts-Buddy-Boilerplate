@@ -17,6 +17,8 @@ The purpose of this repository is to provide an example and template for using [
 
 ## Usage
 
+### Normal Usage
+
 ```
 git clone https://github.com/MitchCodes/Discord.ts-Buddy-Boilerplate.git
 cd Discord.ts-Buddy-Boilerplate
@@ -24,29 +26,39 @@ yarn (OR) npm install
 npm run build
 ```
 
-After installation and building, the application is ready to run. Running main.js in the build folder (with the build folder as the current working directory) with node will start the program. By default the config file will not have a valid token in it so you will have to provide one.
+After installation and building, the application is ready to run. Running main.js in the build folder with node will start the program. By default the config file will not have a valid token in it so you will have to provide one.
 
 ```
-cd build
-node main.js
+npm run start
+```
+
+### Docker
+
+Given that the Docker daemon is running:
+
+```
+git clone https://github.com/MitchCodes/Discord.ts-Buddy-Boilerplate.git
+cd Discord.ts-Buddy-Boilerplate
+docker build -t my-discord-bot .
+docker run -it my-discord-bot
 ```
 
 ## Boilerplate Features
 
 In addition to the features you get from [Discord.ts-Buddy](https://github.com/MitchCodes/Discord.ts-Buddy), here are the features that this repository has for development that I think could be useful as an example:
 
-* Fully-featured package.json with every necessary Discord.js dependency for production.
-* All code written in TypeScript.
+* Fully-featured package.json with every necessary Discord.js dependency for production
+* All code written in TypeScript
 * Webpack for building the application for deployments
-* Optional [configuration file setup](#configuration-file-setup) that works together with webpack when building to development and production.
-* Dockerfile _(coming soon!)_ for creating an image to easily spin up a container with the bot.
+* Optional [configuration file setup](#configuration-file-setup) that works together with webpack when building to development and production
+* Dockerfile for creating an image to easily spin up a container with the bot. See [usage](#usage) for more information
 * Unit tests using Jest
 
 ## Configuration File Setup
 
 There are three optional files that you can create in the root folder next to package.json and the like:
 * _config.common.json_
-    * Necessary to have if you want to have any config file.
+    * Necessary to have if you want to have any config file
 * _config.dev.json_
 * _config.prod.json_
 

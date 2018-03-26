@@ -37,7 +37,8 @@
     "test": "npm run test-only",
     "test-only": "jest --coverage",
     "test:watch": "jest --watch",
-    "test-basic": "jest"
+    "test-basic": "jest",
+    "start": "node ./build/main.js"
   },
   "author": "Mitch Chiles <mitchchiles@gmail.com>",
   "repository": {
