@@ -43,7 +43,7 @@ docker build -t my-discord-bot .
 docker run -it my-discord-bot
 ```
 
-Again, a valid bot token is not provided in the configuration file and will need to be provided.
+Again, a valid bot token is not provided in the configuration file and will need to be provided. Replace "my-discord-bot" with whatever name you would want for your Docker image.
 
 ## Boilerplate Features
 
