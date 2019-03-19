@@ -41,15 +41,17 @@ RUN su -c 'apt-get update' && su -c 'apt-get install --force-yes -y sudo' \
 ###################################################
 
 # Install yarn because heck yeah
-RUN sudo npm install --global yarn
+#RUN sudo npm install --global yarn
 
 # Create the app directory
 WORKDIR /usr/src/app
 
 # Install app dependencies
-COPY package.json yarn.lock ./
+#COPY package.json yarn.lock ./
+COPY package.json ./
 
-RUN sudo yarn
+#RUN sudo yarn
+RUN sudo npm install
 
 
 # Bundle app source
