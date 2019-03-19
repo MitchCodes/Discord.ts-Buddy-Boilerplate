@@ -3,7 +3,7 @@ import { ICommand, ICommandFactory, ICommandResult, CommandResult, CommandResult
         MessengerService, IDiscordBot, ICommandPermissions, CommandPermissionRequirementSettings, 
         CommandPermissionFeedbackType, CommandPermissionType, CommandPermissionRequirement } from 'discord.ts-buddy';
 
-export class PingPongCommand implements ICommand, ICommandFactory {
+export class PingPongCommand implements ICommand, ICommandFactory, ICommandPermissions {
     public commandName: string = 'Ping Pong';
     public commandDescription: string = 'Simple ping pong test';
     public commandMatchText: string = 'ping';
@@ -16,7 +16,10 @@ export class PingPongCommand implements ICommand, ICommandFactory {
 
         this.permissionRequirements = new CommandPermissionRequirementSettings();
         this.permissionRequirements.allRequirements.push(anyTextChannelReq);
-        this.permissionFailReplyType = CommandPermissionFeedbackType.direct;
+        this.permissionFailReplyType = CommandPermissionFeedbackType.textchannel;
+    }
+
+    setupPermissions(bot: IDiscordBot, msg: Message): void {
     }
 
     public getPermissionFailReplyText(msg: Message): string {

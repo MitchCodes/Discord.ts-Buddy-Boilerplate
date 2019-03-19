@@ -1318,10 +1318,10 @@ discord.js@^11.4.2, discord.js@~11.4.2:
     tweetnacl "^1.0.0"
     ws "^4.0.0"
 
-discord.ts-buddy@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/discord.ts-buddy/-/discord.ts-buddy-1.0.6.tgz#d5402f36d13c52e4ae8fbe8092252871cdc09d29"
-  integrity sha512-5uV3vYUOzrvIVbPD+3nhc6JaQFGyFVZH+SP8445IQuPxfJ4HAXVLjWcRYOyaM/tHHSnPbmrbaT5IQOsf4VRnHg==
+discord.ts-buddy@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/discord.ts-buddy/-/discord.ts-buddy-1.0.8.tgz#c3911d71c6cf22db928b4136a686996215d16709"
+  integrity sha512-Vxu2jntJCglciAtA2D/Jtbo+WrEfhHKzmJFwo1KcBLIOeCsTeO5/ongohsQS1Nja16jhHOeOMBAUMALWls6T3A==
   dependencies:
     azure-storage "^2.10.2"
     discord.js "^11.4.2"

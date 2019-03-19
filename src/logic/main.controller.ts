@@ -11,19 +11,17 @@ export class MainController {
         this.logger = winstonLogger;
         this.logger.info('Starting bots.');
 
-        let botTokens: string[] = conf.get('botTokens');
-        if (botTokens.length === 0) {
-            this.logger.error('No bot tokens are set for this program. Shutting down bot.');
+        let botToken: string = conf.get('botToken');
+        if (botToken === undefined || botToken === null || botToken === "") {
+            this.logger.error('No bot token is set for this program. Shutting down bot.');
             
             return;
         }
 
         // leave defaults
         let restartSettings: BotRestartSettings = new BotRestartSettings();
-        
-        this.logger.info(botTokens[0]);
 
-        let exampleBot: ExampleBot = new ExampleBot('Example Bot', botTokens[0], winstonLogger, conf);
+        let exampleBot: ExampleBot = new ExampleBot('Example Bot', botToken, winstonLogger, conf);
         let exampleBotManager: BotManager<ExampleBot> = new BotManager<ExampleBot>(exampleBot, restartSettings, winstonLogger);
 
         exampleBotManager.startBot();

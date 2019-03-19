@@ -1,5 +1,3 @@
 {
-    "botTokens": [
-        "<insert token here>"
-    ]
+    "botToken": "<insert prod token here>"
 }
