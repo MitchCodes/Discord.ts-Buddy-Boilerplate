@@ -33,3 +33,5 @@ config.prod.json
 
 # Misc
 .DS_Store
+package.json
+yarn.lock

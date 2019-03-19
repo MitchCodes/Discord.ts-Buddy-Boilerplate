@@ -3,7 +3,7 @@ import { ICommand, ICommandFactory, ICommandResult, CommandResult, CommandResult
         MessengerService, IDiscordBot, ICommandPermissions, CommandPermissionRequirementSettings, 
         CommandPermissionFeedbackType, CommandPermissionType, CommandPermissionRequirement } from 'discord.ts-buddy';
 
-export class PingPongCommand implements ICommand, ICommandFactory, ICommandPermissions {
+export class PingPongCommand implements ICommand, ICommandFactory {
     public commandName: string = 'Ping Pong';
     public commandDescription: string = 'Simple ping pong test';
     public commandMatchText: string = 'ping';
