@@ -1,13 +1,13 @@
-import { LoggerInstance } from 'winston';
+import { Logger, createLogger, transports }from 'winston';
 import { Provider } from 'nconf';
 import { ExampleBot } from './bots/example-bot';
 import { BotRestartSettings, BotManager } from 'discord.ts-buddy';
 
 export class MainController {
 
-    private logger: LoggerInstance;
+    private logger: Logger;
 
-    public startProgram(winstonLogger: LoggerInstance, conf: Provider) {
+    public startProgram(winstonLogger: Logger, conf: Provider) {
         this.logger = winstonLogger;
         this.logger.info('Starting bots.');
 

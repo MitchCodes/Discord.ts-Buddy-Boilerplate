@@ -1,4 +1,5 @@
-import * as wins from 'winston';
+import { Logger, createLogger, transports } from 'winston';
+import { mkdirSync } from 'fs';
 import { MainController } from './logic/main.controller';
 // tslint:disable-next-line:no-import-side-effect
 import 'winston-daily-rotate-file';
@@ -12,17 +13,17 @@ nconf.defaults({
 });
 
 // Logging
-const fileTransport = new wins.transports.DailyRotateFile({
-  filename: 'logs',
-  datePattern: '/yyyy/MM/bot-yyyy-MM-dd.log',
-  maxDays: 90,
-  createTree: true,
+const fileTransport = new (<any>transports).DailyRotateFile({
+  filename: 'bot-%DATE%.log',
+  dirname: './logs/',
+  datePattern: 'YYYY-MM-DD',
+  maxFiles: 90,
 });
 
-const logger = new wins.Logger({
+const logger = createLogger({
   level: 'debug',
   transports: [
-    new (wins.transports.Console)(),
+    new transports.Console(),
     fileTransport,
   ],
 });

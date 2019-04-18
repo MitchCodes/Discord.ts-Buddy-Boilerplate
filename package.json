@@ -1,6 +1,6 @@
 {
   "name": "discord.ts-buddy-boilerplate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Discord.ts-Buddy example boilerplate to quick start your Discord bot development.",
   "engineStrict": true,
   "engines": {
@@ -10,7 +10,6 @@
   "devDependencies": {
     "@types/jest": "~22.2.0",
     "@types/node": "~8.5.8",
-    "@types/winston": "~2.3.7",
     "@types/nconf": "~0.0.37",
     "jest": "~22.4.1",
     "rimraf": "~2.6.2",
@@ -51,14 +50,15 @@
   "homepage": "https://github.com/MitchCodes/Discord.ts-Buddy-Boilerplate",
   "dependencies": {
     "tslib": "~1.8.1",
-    "winston": "2.3.0",
-    "winston-daily-rotate-file": "~1.7.2",
+    "winston": "3.2.1",
+    "winston-daily-rotate-file": "3.8.0",
+    "winston-transport": "4.3.0",
     "nconf": "~0.10.0",
     "rxjs": "~5.5.6",
-    "discord.js": "~11.4.2",
-    "ffmpeg-binaries": "~3.2.2-3",
+    "discord.js": "11.4.2",
+    "ffmpeg-binaries": "3.2.2-3",
     "azure-storage": "~2.8.0",
-    "discord.ts-buddy": "^1.0.8",
+    "discord.ts-buddy": "1.0.12",
     "bufferutil": "~3.0.3",
     "libsodium-wrappers": "^0.7.3",
     "node-opus": "0.2.7",

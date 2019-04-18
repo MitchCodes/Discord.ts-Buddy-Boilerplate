@@ -1,4 +1,4 @@
-import { LoggerInstance } from 'winston';
+import { Logger, createLogger, transports }from 'winston';
 import { Provider } from 'nconf';
 import { MultiGuildBot, CommandParser, CommandMatchingSettings, CommandMatchingType, 
         ICommand, ICommandFactory, ICommandResult } from 'discord.ts-buddy';
@@ -7,7 +7,7 @@ import { Message } from 'discord.js';
 
 export class ExampleBot extends MultiGuildBot {
 
-    constructor(passedBotName: string, passedBotToken: string, passedLogger: LoggerInstance, 
+    constructor(passedBotName: string, passedBotToken: string, passedLogger: Logger, 
                 passedConf: Provider) {
         super(passedBotName, passedBotToken, passedLogger, passedConf);
     }
